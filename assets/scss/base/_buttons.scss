@@ -1,0 +1,260 @@
+//
+// BUTTONS
+// -------
+
+$white: #ffffff;
+$cirle-bg: $primary-color;
+
+@mixin transition(
+  $property: all,
+  $duration: 0.45s,
+  $ease: cubic-bezier(0.65, 0, 0.076, 1)
+) {
+  transition: $property $duration $ease;
+}
+
+.wp-block-button {
+  margin-bottom: 0;
+}
+
+.btn,
+.is-style-btn .wp-block-button__link {
+  padding: 12px 32px;
+  color: #262626;
+  border: 1px solid $primary-color;
+  background: #ffffff;
+  box-shadow: 0 4px 16px 0 rgba(216, 7, 74, 0.1);
+  height: auto;
+  display: block;
+
+  &:hover {
+    background: $primary-color;
+    color: white;
+  }
+
+  &:focus {
+    background: #ffffff;
+    color: #262626;
+  }
+}
+
+.btn,
+.is-style-btn .wp-block-button__link {
+  @media #{$mq-small} {
+    display: inline-block;
+  }
+}
+
+.btn-primary,
+.is-style-btn-primary .wp-block-button__link {
+  padding: 12px 32px;
+  background: $primary-color;
+  border-color: $primary-color;
+  border-style: solid;
+  text-transform: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  border-width: 1px;
+  color: $font-color--inverse !important;
+  box-shadow: 0 8px 16px 0 transparentize($color: $primary-color, $amount: 0.6);
+  transition: all $animation-timing linear;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 48px;
+
+  &:hover {
+    background: darken($primary-color, 10%);
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  @media #{$mq-small} {
+    margin-bottom: 0;
+  }
+}
+
+.btn.btn-link,
+.is-style-btn-link .wp-block-button__link {
+  background: none;
+  box-shadow: none;
+  display: inline-block;
+  border: 0;
+  border-bottom: 1px solid;
+  color: $font-color;
+  padding: 0;
+  padding-bottom: 4px;
+  border-radius: 0;
+  font-size: 16px;
+  &::after {
+    font-family: "simple-line-icons";
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: "\e606";
+    border: 0;
+    font-size: 12px;
+    padding-left: 8px;
+    height: 0.65em;
+    width: 0.65em;
+  }
+
+  &:hover {
+    border-bottom: 1px solid;
+    background: transparent;
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+/* IE11 */
+@media all and (-ms-high-contrast: none) {
+  *::-ms-backdrop,
+  .btn.btn-link::after {
+    content: "";
+    background-image: url("./assets/images/angle-icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-left: 12px;
+  }
+  *::-ms-backdrop,
+  .btn.btn-link:hover:after {
+    background-image: url("./assets/images/angle-icon--hover.png");
+  }
+}
+
+.wpcf7-submit {
+  // @extend .btn.btn-primary;
+  padding: 12px 40px;
+  line-height: 1;
+  height: auto;
+  text-transform: uppercase;
+  float: right;
+
+  &[disabled],
+  &:disabled,
+  &.disabled {
+    cursor: default;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.wp-block-button__link:active,
+.wp-block-button__link:focus,
+.wp-block-button__link:hover,
+.wp-block-button__link:visited {
+  color: initial;
+}
+
+// .wp-block-file a:not(.wp-block-file__button) {
+//     display: block;
+//     margin-bottom: 24px;
+// }
+
+// .wp-block-file .wp-block-file__button {
+//     @extend .btn.btn-link;
+// }
+
+.wp-block-file {
+  a {
+    text-decoration: underline;
+  }
+}
+
+.btn-primary--inverse {
+  @extend .btn-primary;
+  background-color: $primary-color !important;
+  color: #ffffff !important;
+
+  &:hover {
+    background-color: darken($primary-color, 15%) !important;
+  }
+}
+
+.btn-secondary {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  width: 12rem;
+  height: auto;
+  .circle {
+    @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+    position: relative;
+    margin: 0;
+    width: 48px;
+    height: 48px;
+    background: $cirle-bg;
+    border-radius: 1.625rem;
+    .icon {
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: $white;
+      &.arrow {
+        @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+        left: 7px;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+        &::before {
+          position: absolute;
+          content: "";
+          top: -0.25rem;
+          right: 0.0625rem;
+          width: 0.625rem;
+          height: 0.625rem;
+          border-top: 0.125rem solid #ffffff;
+          border-right: 0.125rem solid #ffffff;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  .button-text {
+    @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px 0;
+    margin: 0 0 0 1rem;
+    color: $font-color;
+    // font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+          background: $white;
+          transform: translate(1rem, 0);
+        }
+      }
+    }
+    .button-text {
+      color: $white;
+    }
+  }
+}

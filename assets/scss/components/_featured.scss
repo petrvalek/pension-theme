@@ -1,0 +1,35 @@
+//
+// FEATURED
+// --------
+
+.featured {
+  margin: 32px 0 0;
+
+  @media #{$mq-small} {
+    margin: 80px 0 0;
+  }
+}
+
+.featured-item {
+  margin-bottom: 16px;
+  display: table;
+
+  @media #{$mq-small} {
+    margin-bottom: 48px;
+  }
+}
+
+.featured-item__thumbnail {
+  display: table-cell;
+  padding-right: 16px;
+  width: 32px + 16px;
+}
+
+.featured-item__text {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.featured-item__text br {
+  display: block;
+}

@@ -1,0 +1,77 @@
+//
+// COLLAPSE BUTTON
+// -----------------
+
+#collapse-menu #collapse-button {
+    color: $admin_menu-link-color;
+    margin-left: 24px;
+    margin-top: 40px;
+    &:hover {
+        color: $admin_menu-link-color-hover;
+    }
+}
+
+.folded #adminmenu,
+.folded #adminmenu li.menu-top,
+.folded #adminmenuback,
+.folded #adminmenuwrap {
+    width: 80px;
+    transition: width .2s linear;
+}
+
+.folded #wpcontent,
+.folded #wpfooter {
+    margin-left: 80px;
+}
+
+.folded #adminmenu .wp-has-current-submenu .wp-submenu
+.folded #adminmenu .opensub .wp-submenu,
+#adminmenu .wp-not-current-submenu .wp-submenu,
+.folded #adminmenu .wp-has-current-submenu .wp-submenu {
+    display: none;
+}
+
+.auto-fold #wpcontent,
+.auto-fold #wpfooter {
+    @media screen and (max-width: 767px) {
+        margin-left: 80px;
+    }
+}
+
+.auto-fold #adminmenu,
+.auto-fold #adminmenu li.menu-top,
+.auto-fold #adminmenuback,
+.auto-fold #adminmenuwrap {
+    @media screen and (max-width: 767px) {
+        width: 80px;
+        transition: width .2s linear;
+    }
+    @media screen and (min-width: 767px) and (max-width: 960px) {
+        width: 240px;
+    }
+}
+
+.auto-fold #adminmenuback,
+.auto-fold #adminmenuwrap {
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+        display: block !important;
+    }
+}
+
+#collapse-menu,
+.auto-fold #collapse-menu .collapse-button-label {
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+        // display: block !important;
+    }
+}
+
+#wpcontent,
+#wpfooter {
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+        margin-left: 248px !important;
+    }
+}
+
+.folded .edit-post-header {
+    left: 80px !important;
+}

@@ -1,0 +1,141 @@
+/*  LOGIN FORM  */ 
+
+body.login {
+    background: #FCFBFC;
+}
+
+body.login div#login {
+    width: 380px;
+}
+
+body.login h1 a {
+    margin: 0 auto;
+    background-size: 240px;
+    width: auto;
+    line-height: 0;
+    margin-bottom: 32px;
+    height: 56px;
+}
+
+body.login div#login form#loginform,
+body.login div#login form#lostpasswordform {
+    padding: 40px 32px;
+    margin-top: 24px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 40px -12px rgba(1,126,255,.30);
+    border-radius: 8px;
+}
+
+.login #login_error,
+.login .message,
+.login .success {
+    margin-bottom: 0;
+    background: 0;
+    border: 0;
+    padding: 8px 12px 8px 24px;
+    box-shadow: none;
+}
+
+.login #login_error {
+    border-left: #EE3935 4px solid;
+}
+
+.login .message,
+.login .success {
+    border-left: #017EFF 4px solid;
+}
+
+.login .message {
+    display: none;
+} 
+
+
+body.login div#login form#loginform input:not([type="checkbox"]),
+body.login div#login form#lostpasswordform input:not([type="checkbox"]) {
+    background: #FEFEFE;
+    border: 1px solid #F5F5F5;
+    border-radius: 4px;
+    margin: 0;
+    margin-top: 8px;
+    padding: 8px 12px;
+    height: 48px;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+body.login div#login form#loginform input:focus,
+body.login div#login form#lostpasswordform input:focus {
+    box-shadow: 0 4px 40px -12px rgba(1,126,255,.30);
+    border-color: #017EFF;
+}
+
+body.login div#login form#loginform input[aria-describedby="login_error"],
+body.login div#login form#lostpasswordform input[aria-describedby="login_error"] {
+    /* box-shadow: 0 4px 40px -12px rgba(1,126,255,.30); */
+    border-color: #EE3935;
+}
+
+body.login div#login form#loginform input#user_login,
+body.login div#login form#loginform input#user_pass,
+body.login div#login form#lostpasswordform input#user_login,
+body.login div#login form#lostpasswordform input#user_pass {
+    margin-bottom: 24px;
+}
+
+body.login div#login form#loginform p.forgetmenot {
+    float: none;
+    margin-top: 16px;
+}
+
+body.login div#login form#loginform p.forgetmenot input#rememberme {
+    color: #DDDDDD;
+    border: 1px solid #DDDDDD;
+    box-shadow: none;
+    background: transparent;
+}
+
+body.login div#login form#loginform p.forgetmenot input#rememberme:checked:before {
+    color: #017EFF;
+}
+
+body.login div#login form#loginform p.submit,
+body.login div#login form#lostpasswordform p.submit {
+    display: block;
+    text-align: center;
+    margin-top: 32px;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit,
+body.login div#login form#lostpasswordform p.submit input#wp-submit {
+    background: #017EFF;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    padding: 12px 48px;
+    text-transform: uppercase;
+    text-align: center;
+    height: auto;
+    /* line-height: 0; */
+    float: none;
+    text-shadow: none;
+    cursor: pointer;
+    transition: background .2s ease-in;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover,
+body.login div#login form#lostpasswordform p.submit input#wp-submit:hover {
+    background: #004C9A;
+}
+
+body.login div#login p#nav {
+    text-align: center;
+    margin-top: 32px;
+}
+
+body.login div#login p#nav a:hover {
+    color: #017EFF;
+}
+
+body.login div#login p#backtoblog {
+    display: none;
+}

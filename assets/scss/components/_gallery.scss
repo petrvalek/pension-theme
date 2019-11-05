@@ -1,0 +1,75 @@
+//
+// FANCYBOX
+// -------
+
+.blocks-gallery-item {
+  @media #{$mq-small} {
+    // margin: 0 !important;
+  }
+}
+.blocks-gallery-item figure a,
+.wp-block-gallery .blocks-gallery-item img {
+  width: 100%;
+}
+
+.room-single__thumbnail,
+.blocks-gallery-item figure a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.room-single__thumbnail:before,
+.blocks-gallery-item figure a:before {
+  content: "";
+  transition: opacity 0.3s;
+  background: rgba(0, 0, 0, 0.4);
+
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.room-single__thumbnail:hover:before,
+.blocks-gallery-item figure a:hover::before {
+  opacity: 1;
+}
+
+.room-single__thumbnail:after,
+.blocks-gallery-item figure a::after {
+  content: "\e091";
+  font-family: $simple-line-font-family;
+  font-weight: 400;
+  font-style: normal;
+  color: $font-color--inverse;
+  display: inline-block;
+  text-decoration: inherit;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  font-size: 32px;
+  text-decoration: none !important;
+}
+
+.room-single__thumbnail:hover:after,
+.blocks-gallery-item figure a:hover::after {
+  opacity: 1;
+}
+
+.room-single__thumbnail:after {
+  content: "\e087";
+}
+
+.blocks-gallery-item figcaption {
+  display: none;
+}

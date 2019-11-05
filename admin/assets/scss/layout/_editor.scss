@@ -1,0 +1,21 @@
+//
+// EDITOR
+// --------
+
+.auto-fold .edit-post-header {
+    left: $admin_menu-width;
+}
+body.auto-fold .edit-post-layout__content {
+    margin-left: $admin_menu-width;
+}
+
+.wp-block {
+    max-width: $editor_wide;
+    &[data-align="full"] {
+        max-width: none;
+    }
+    &[data-align="wide"] {
+        max-width: calc( #{$editor_wide} + 200px );
+    }
+}
+

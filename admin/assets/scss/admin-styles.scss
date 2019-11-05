@@ -1,0 +1,24 @@
+//
+// ADMIN STYLESHEET
+// ----------------
+
+/*  BASE  */
+@import "base/variables";
+@import "base/buttons";
+@import "base/typography";
+
+/*  COMPONENTS  */
+@import "components/login-form";
+@import "components/admin-menu";
+@import "components/collapse-button";
+@import "components/user";
+@import "components/welcome-dashwidget";
+@import "components/notifications";
+@import "components/row-actions";
+
+/*  LAYOUT  */
+@import "layout/admin";
+@import "layout/content";
+@import "layout/bar";
+@import "layout/editor";
+

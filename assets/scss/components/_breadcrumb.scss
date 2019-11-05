@@ -1,0 +1,33 @@
+//
+// BREADCRUMB
+// -----------
+
+.breadcrumb a {
+  color: $secondary-color;
+  border-bottom: 1px solid;
+  transition: color $animation-timing ease-in-out;
+}
+
+.breadcrumb a:hover {
+  text-decoration: none;
+  color: $font-color--inverse;
+}
+
+// First link home icon
+.breadcrumb > span > span {
+  &::before {
+    content: "";
+    background-image: url("assets/images/home-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+}
+
+.breadcrumb span {
+  color: $font-color--inverse;
+}

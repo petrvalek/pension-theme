@@ -1,0 +1,111 @@
+//
+// VARIABLES
+// ---------
+
+// COLORS
+$white: #ffffff;
+$black: #3d3b38;
+$grey-100: #f5f5f5;
+$grey-200: #e7e7e7;
+// $primary-color: #734124;
+$primary-color: #8d3e3b;
+$secondary-color: #f2e6d0;
+// $secondary-color: #f2e6d0;
+$product-kids-color: #fa983a;
+
+// FONTS
+$sans-serif-font-family: "Open Sans", Arial, Helvetica, sans-serif;
+$serif-font-family: "Playfair Display", serif;
+$base-font-family: $sans-serif-font-family;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
+$font-color: $black;
+$font-color--inverse: $white;
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+$link-color: $black;
+$link-color-hover: $primary-color;
+$simple-line-font-path: "./assets/fonts/";
+
+// - FONT SIZES
+$font-size: 0.85em;
+$h1-font-size: 56px;
+$h2-font-size: 36px;
+$h3-font-size: 22px;
+
+// LAYOUT
+$layout-spacing: 1rem;
+$gutter: 32px;
+$container: 100%;
+$section-spacing: 1em;
+$section-spacing-lg: 5em;
+
+// MEDIA QUERIES
+
+// - Breakpoints
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// - Media Queries
+$mq-small: "only screen and (min-width: #{$bp-small})";
+$mq-medium: "only screen and (min-width: #{$bp-medium})";
+$mq-large: "only screen and (min-width: #{$bp-large})";
+$mq-xlarge: "only screen and (min-width: #{$bp-xlarge})";
+$mq-xxlarge: "only screen and (min-width: #{$bp-xxlarge})";
+$mq-retina: "only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+// HEADER
+// $header-bg: $black;
+$header-bg: transparentize(#441201, 0.7);
+$header-bg-color: $secondary-color;
+
+// NAVBAR
+$mobile-menu-width: 100%;
+$menu-mobile-bg: $primary-color;
+// $menu-mobile-bg: #441201;
+$hamburger-bgcolor: $white;
+$menu-link-font-size: 16px;
+$menu-link-padding-x: 24px;
+$menu-link-padding-y: 0;
+$menu-link-color: $white;
+$menu-link-color-hover: $white;
+$menu-link-color-active: $white;
+$menu-link-border-width: 32px;
+$menu-link-border-color-hover: $secondary-color;
+$menu-link-border-color-active: $secondary-color;
+
+// FOOTER
+$footer-padding: 56px 0 4px;
+$footer-bg-color: #fcfcfc;
+
+// FOOTER Navbar
+$footer-menu-link-color: $black;
+$footer-menu-link-color-hover: $primary-color;
+$footer-menu-link-color-active: $black;
+
+// HERO
+$hero-text-color: $white;
+$hero-text-align: left;
+
+// ANIMATION
+$animation-timing: 0.1s;
+
+// SLICK
+
+$slick-font-path: "./assets/fonts/" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "./assets/img/" !default;
+$slick-arrow-color: white !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-prev-character: "\2190" !default;
+$slick-next-character: "\2192" !default;
+$slick-dot-character: "\2022" !default;
+$slick-dot-size: 6px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;

@@ -1,0 +1,65 @@
+//
+// STYLESHEET
+//
+// base/ - contains global styles, such as resets, typography, colors, etc.
+// components/ - contains each self-contained component in its own  partial
+// layout/ - contains styling for larger layout components; e.g. nav, header, footer, etc.
+// pages/ - contains page-specific styling, if necessary
+// utils/ - contains global mixins, functions, helper selectors, etc.
+// vendors/ - contains 3rd-party styles, mixins, etc.
+// style.less - output file that brings together all of the above parts
+// ----------
+
+// BASE
+@import "base/variables";
+
+// SIMPLE LINE ICONS
+@import "../../node_modules/simple-line-icons/scss/simple-line-icons.scss";
+
+// SPECTRE Framework
+@import "../../node_modules/spectre.css/src/variables";
+@import "../../node_modules/spectre.css/src/mixins";
+@import "../../node_modules/spectre.css/src/normalize";
+@import "../../node_modules/spectre.css/src/base";
+
+@import "../../node_modules/spectre.css/src/typography";
+@import "../../node_modules/spectre.css/src/forms";
+@import "../../node_modules/spectre.css/src/layout";
+@import "../../node_modules/spectre.css/src/media";
+@import "../../node_modules/spectre.css/src/toasts";
+@import "../../node_modules/spectre.css/src/tables";
+
+@import "base/buttons";
+@import "base/typography";
+@import "base/form";
+@import "base/blocks";
+
+// UTILS
+@import "utils/cookie-box";
+
+// VENDORS
+@import "vendors/lightbox.min";
+
+// COMPONENTS
+// @import "components/slider";
+// @import "components/divider";
+@import "components/hamburger";
+@import "components/hero";
+@import "components/breadcrumb";
+@import "components/room-item";
+@import "components/gallery";
+@import "components/featured";
+@import "components/lang-switcher";
+@import "components/infobox";
+@import "components/restaurant";
+@import "components/trip-tips";
+@import "components/mobile-navigate";
+@import "components/newsletter";
+
+// LAYOUTS
+@import "layouts/global";
+@import "layouts/header";
+@import "layouts/navbar";
+@import "layouts/footer";
+@import "layouts/404";
+@import "layouts/room";

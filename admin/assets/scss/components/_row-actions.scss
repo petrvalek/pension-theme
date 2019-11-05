@@ -1,0 +1,14 @@
+//
+// ROW ACTIONS
+// -----------
+
+.row-actions {
+    .button-link,
+    a {
+        color: $link-text-color;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}

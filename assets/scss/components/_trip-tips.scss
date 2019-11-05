@@ -1,0 +1,38 @@
+//
+// TRIP TIPS
+// ---------
+
+.tip {
+  margin-bottom: 80px;
+  //   background-color: $grey-100;
+}
+
+.tip-thumbnail {
+  margin-bottom: 32px;
+
+  @media #{$mq-small} {
+    margin-bottom: 0;
+  }
+}
+
+.tip-thumbnail img {
+  width: 100%;
+}
+
+.tip-content-inner {
+  //   padding: 24px 40px;
+}
+
+.tip-button {
+  margin-top: 32px;
+}
+
+@media #{$mq-small} {
+  .wp-block-lazyblock-tipy-na-vylety-tip {
+    &:nth-child(even) {
+      .tip-thumbnail {
+        order: 1;
+      }
+    }
+  }
+}

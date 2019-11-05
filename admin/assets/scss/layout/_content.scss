@@ -1,0 +1,14 @@
+//
+// CONTENT
+// ---------
+
+#wpcontent,
+#wpfooter {
+    margin-left: $admin_menu-width;
+    padding-left: 24px !important;
+}
+
+
+#screen-meta-links {
+    display: none;
+}

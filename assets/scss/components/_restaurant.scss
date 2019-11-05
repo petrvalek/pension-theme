@@ -1,0 +1,74 @@
+//
+// RESTAURANT
+// ----------
+
+.restaurant {
+  margin-top: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  @media #{$mq-small} {
+    margin-top: 144px;
+  }
+}
+
+.restaurant-content {
+  position: relative;
+  z-index: 10;
+  margin-top: 160px;
+  background-color: #fff;
+  padding: 48px 24px 0;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+}
+
+.restaurant-content {
+  @media #{$mq-small} {
+    text-align: left;
+    padding: 48px 32px 40px;
+  }
+  @media #{$mq-medium} {
+    padding: 48px;
+  }
+  @media #{$mq-large} {
+    padding: 80px;
+  }
+}
+
+.restaurant-content p {
+  margin-bottom: 40px;
+}
+
+.tips {
+  margin: 60px 0;
+}
+
+.tips-inner {
+  background-color: #f2e9e4;
+  padding: 48px 24px 0;
+}
+.tips-inner {
+  @media #{$mq-small} {
+    text-align: center;
+    padding: 72px;
+  }
+}
+
+.tips-inner p {
+  margin-bottom: 40px;
+  @media #{$mq-medium} {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.tips .wp-block-spacer {
+  display: none;
+
+  @media #{$mq-small} {
+    display: block;
+  }
+}

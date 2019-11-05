@@ -1,0 +1,41 @@
+//
+// ROOMS ITEM
+// --------------
+
+.room-sigle {
+  border-bottom: 1px solid $grey-200;
+  margin-bottom: 24px;
+}
+
+.room-single__thumbnail {
+  display: block;
+  overflow: hidden;
+}
+
+.room-single__thumbnail img {
+  width: 100%;
+  transition: transform 200ms linear;
+  &:hover {
+    transform: scale(1.1);
+  }
+  @media #{$mq-small} {
+    width: auto;
+  }
+}
+
+.room-single__meta {
+  padding: 24px 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.room-single__meta-title {
+}
+
+.room-single__meta-btn {
+  font-weight: 600;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

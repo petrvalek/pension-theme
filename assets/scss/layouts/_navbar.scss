@@ -1,0 +1,122 @@
+//
+// NAVBAR
+// -------
+
+.navbar {
+  list-style: none;
+  margin: 0 !important;
+  padding-left: 32px;
+}
+
+.navbar {
+  @media screen and (max-width: $bp-medium - 1) {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 9999;
+    margin: 0;
+    width: $mobile-menu-width;
+    overflow-y: auto;
+    padding-top: 1em;
+    // padding-left: 2em;
+    background: $menu-mobile-bg;
+    left: 0;
+    transition: all 0.5s;
+    transform: translateX(-$mobile-menu-width);
+    list-style: none;
+  }
+}
+
+.navbar {
+  @media #{$mq-medium} {
+    opacity: 1;
+    overflow: visible;
+    max-height: 100%;
+    margin-left: 0;
+  }
+}
+
+// NAV OPEN
+body.nav-open {
+  overflow: hidden;
+  height: 100%;
+  // position: fixed;
+}
+
+.site-navigation {
+  list-style: none;
+  margin: 0;
+}
+
+.navbar {
+  .menu-item {
+    margin: 32px 0;
+  }
+  @media #{$mq-medium} {
+    .menu-item {
+      margin: 0;
+      display: inline-block;
+      padding: 0 12px;
+
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+  @media #{$mq-large} {
+    .menu-item {
+      margin: 0;
+      display: inline-block;
+      padding: $menu-link-padding-y $menu-link-padding-x;
+    }
+    .menu-item:first-child {
+      padding-top: 0;
+      padding-left: $menu-link-padding-x * 1;
+    }
+    .menu-item:last-child {
+      padding: 0;
+      padding-left: $menu-link-padding-x;
+      padding-right: 0;
+    }
+    .menu-item {
+      a {
+        font-size: $menu-link-font-size;
+      }
+    }
+  }
+}
+
+.menu-item a {
+  color: $menu-link-color;
+  text-decoration: none;
+  font-size: $menu-link-font-size;
+  padding-bottom: 4px;
+  // border-bottom: $menu-link-border-width solid transparent;
+  font-weight: normal;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: 4px;
+    background-color: $menu-link-border-color-hover;
+    width: 0;
+    transition: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
+  }
+}
+
+.menu-item a:hover,
+.menu-item.current-menu-item a {
+  &::after {
+    content: "";
+    width: $menu-link-border-width;
+    display: block;
+    height: 2px;
+    margin-top: 4px;
+    background-color: $menu-link-border-color-hover;
+  }
+}
+
+.footer .menu-item a {
+  color: $font-color;
+}

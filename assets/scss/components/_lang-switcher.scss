@@ -1,0 +1,164 @@
+//
+// LANG SWITCHER
+// -------------
+
+.header__lang-switcher {
+  display: none;
+  padding: 0 12px 0 4px;
+}
+
+.header__lang-switcher::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  display: block;
+  background-color: transparentize(#e7e7e7, 0.8);
+  position: absolute;
+  top: 0;
+  margin-left: -16px;
+}
+
+.header__lang-switcher {
+  @media #{$mq-small} {
+    display: block;
+  }
+  @media #{$mq-medium} {
+    margin-left: auto;
+  }
+  @media #{$mq-large} {
+    padding: 0 32px 0 0;
+  }
+}
+
+.header__lang-switcher::before {
+  @media #{$mq-large} {
+    margin-left: -24px;
+  }
+}
+
+.header__lang-switcher.navbar-lang {
+  margin: 0;
+  display: inline-block;
+  border-top: #e7e7e7 1px solid;
+  //   margin-top: 40px;
+  padding-top: 20px;
+  padding-left: 0;
+
+  &:before {
+    display: none;
+  }
+
+  @media #{$mq-small} {
+    display: none;
+  }
+
+  .switcher .option {
+    background: none;
+  }
+
+  .switcher .option a {
+    color: #fff !important;
+  }
+}
+
+.header__lang-switcher {
+  .switcher {
+    overflow: visible;
+    position: relative;
+  }
+  .switcher a {
+    font-size: 14px;
+    color: $font-color--inverse !important;
+    font-family: $sans-serif-font-family;
+  }
+
+  .switcher a img {
+    vertical-align: middle;
+    margin-right: 4px;
+    // display: none;
+  }
+
+  .switcher .option a {
+    color: $font-color !important;
+    background: none;
+  }
+
+  .switcher .option a:hover {
+    color: $primary-color !important;
+    background: none;
+  }
+
+  .switcher .option a.selected {
+    background: none;
+    // color: $primary-color !important;
+  }
+
+  .switcher,
+  .switcher .selected a {
+    // width: 96px;
+    width: auto;
+  }
+
+  .switcher .selected a.open,
+  .switcher .selected {
+    background: none;
+  }
+
+  // Switcher box
+  .switcher .option {
+    position: absolute;
+    border: 0;
+    background: #fff;
+    width: 100%;
+    padding: 0 0 0 4px;
+    margin-top: 8px;
+
+    @media #{$mq-small} {
+      left: -16px;
+      padding: 16px 7px 8px 20px;
+    }
+
+    @media #{$mq-medium} {
+      border-left: 1px solid #e7e7e7;
+    }
+
+    @media #{$mq-large} {
+      left: -24px;
+      padding: 16px 27px 8px 28px;
+    }
+  }
+
+  .switcher .option a {
+    padding: 0;
+    margin: 16px 0 24px;
+    // font-size: 13px;
+    white-space: nowrap;
+
+    &:last-child {
+      margin-bottom: 16px;
+    }
+  }
+
+  .switcher .selected a {
+    border: 0;
+    white-space: nowrap;
+    &:hover {
+      background: none !important;
+    }
+  }
+
+  .switcher .selected a::after {
+    content: "\e604";
+    font-family: $simple-line-font-family;
+    // position: absolute;
+    // right: -18px;
+    // top: 4px;
+    // display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+
+  .switcher .selected a.open::after {
+    content: "\e607";
+  }
+}

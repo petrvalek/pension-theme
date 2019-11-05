@@ -1,0 +1,67 @@
+//
+// NEWSLETTER
+// ---–––––––
+
+.newsletter {
+  padding: 64px 0;
+  color: $font-color--inverse;
+  background-color: #441201;
+  text-align: center;
+  @media #{$mq-medium} {
+    text-align: left;
+  }
+}
+
+.newsletter .columns {
+  align-items: center;
+}
+
+.newsletter input {
+  width: 60%;
+  padding-left: 8px;
+  @media #{$mq-small} {
+    padding: 24px 24px 24px 56px;
+  }
+}
+
+.newsletter .input-group {
+  justify-content: center;
+  @media #{$mq-medium} {
+    // justify-content: flex-end;
+  }
+}
+
+.newsletter .input-group .icon-envelope {
+  //   content: "\e01f";
+  //   content: "\e086";
+  display: block;
+  position: relative;
+  right: -48px;
+  align-self: center;
+  font-size: 24px;
+  color: #cacaca;
+  display: none;
+  //   transform: translateY(-50%);
+  @media #{$mq-small} {
+    display: block;
+  }
+}
+
+.newsletter .btn {
+  background-color: #f2e6d0;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0;
+  color: $font-color !important;
+  margin: 0;
+  font-size: 12px;
+
+  @media #{$mq-small} {
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: $primary-color;
+    color: white !important;
+  }
+}

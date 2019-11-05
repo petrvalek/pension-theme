@@ -1,0 +1,125 @@
+//
+// HEADER
+// -------
+
+.header {
+  position: relative;
+  // background-color: $header-bg;
+  z-index: 5;
+  border-bottom: 1px solid transparentize(#e7e7e7, 0.8);
+}
+
+.header__container {
+  @media #{$mq-xlarge} {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 1600px;
+  }
+}
+
+.header__inner {
+  position: relative;
+  //   padding: 16px 0;
+  //   overflow: auto;
+  z-index: 10;
+  // border-bottom: 1px solid #BEBEBE;)
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.header__site-info {
+  margin-left: 1rem;
+
+  @media #{$mq-large} {
+    margin-left: 40px;
+  }
+}
+
+.site-info__logo {
+  display: block;
+}
+
+.site-info__logo .site-title {
+  line-height: 1;
+  font-size: 24px;
+
+  @media #{$mq-large} {
+    font-size: 29px;
+  }
+}
+
+.site-info__logo .subtitle {
+  margin-top: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: $serif-font-family;
+  @media #{$mq-small} {
+    display: block;
+    margin-top: 12px;
+  }
+  @media #{$mq-large} {
+    font-size: 14px;
+    display: block;
+  }
+}
+
+.site-info__logo span {
+  border-right: 1px solid;
+  margin: 0 4px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.site-info__logo img {
+  width: auto;
+  vertical-align: middle;
+  height: 48px;
+
+  @media #{$mq-medium} {
+    height: 64px;
+  }
+}
+
+.site-title {
+  margin: 0;
+  color: $menu-link-color;
+  font-weight: 400;
+}
+
+.header__navbar {
+  margin-left: auto;
+  @media #{$mq-medium} {
+    margin-left: 0;
+  }
+}
+
+.header__cta-btn {
+  padding: 24px 12px;
+  background: $primary-color;
+  // font-weight: 700;
+  color: #fff !important;
+  font-family: $serif-font-family;
+  display: block;
+  font-size: 16px;
+  transition: background $animation-timing linear;
+
+  &:hover {
+    background: darken($primary-color, 10%);
+    text-decoration: none;
+  }
+}
+
+.header__cta-btn {
+  @media #{$mq-medium} {
+    padding: 32px 24px;
+  }
+  @media #{$mq-large} {
+    padding: 32px 32px;
+  }
+}

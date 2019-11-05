@@ -1,0 +1,158 @@
+//
+// Hamburger toggle
+// ----------------
+
+// Mobile BTN
+.toggle {
+  display: none;
+}
+
+.toggle-label {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: auto;
+  width: 48px;
+  height: 48px;
+  user-select: none;
+  margin-right: 24px;
+  z-index: 100;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  top: -1px;
+}
+
+// Tablet breakpoint
+@media #{$mq-medium} {
+  .toggle-label {
+    display: none;
+  }
+}
+
+.toggle-label:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggle-label {
+  cursor: pointer;
+}
+
+.toggle-label .toggle-icon,
+.toggle-label .toggle-icon:before,
+.toggle-label .toggle-icon:after {
+  position: relative;
+  display: block;
+  top: 50%;
+  left: 50%;
+  height: 3px;
+  width: 32px;
+  background: $hamburger-bgcolor;
+  content: "";
+  transition: all 500ms ease-in-out;
+}
+
+.toggle-label .toggle-text {
+  position: relative;
+  display: block;
+  top: calc(100% - 15px);
+  height: 14px;
+  font-size: 8px;
+  font-size: 0.8rem;
+  color: $hamburger-bgcolor;
+  text-align: center;
+}
+
+.toggle-label .toggle-text:before {
+  position: absolute;
+  width: 100%;
+  font-size: 12px;
+  left: 0;
+  content: "MENU";
+  transition: all 500ms ease-in-out;
+  visibility: visible;
+  opacity: 1;
+}
+
+.toggle-label .toggle-text:after {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  font-size: 12px;
+  content: "ZAVŘÍT";
+  transition: all 500ms ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.toggle-label .toggle-icon {
+  transform: translate3d(-50%, -5px, 0);
+}
+
+.toggle-label .toggle-icon:before {
+  transform: translate3d(-50%, -11.5px, 0);
+}
+
+.toggle-label .toggle-icon:after {
+  transform: translate3d(-50%, 5px, 0);
+}
+
+.toggle:checked ~ .toggle-label .toggle-icon {
+  background-color: transparent;
+}
+
+.toggle:checked ~ .toggle-label .toggle-icon:before,
+.toggle:checked ~ .toggle-label .toggle-icon:after {
+  top: 0;
+}
+
+.toggle:checked ~ .toggle-label .toggle-icon:before {
+  transform: translateX(-50%) rotate(45deg);
+  top: 1.5px;
+}
+
+.toggle:checked ~ .toggle-label .toggle-icon:after {
+  transform: translateX(-50%) translateY(-10px) rotate(-45deg);
+  top: 8.5px;
+}
+
+.toggle:checked ~ .toggle-label .toggle-text:before {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.toggle:checked ~ .toggle-label .toggle-text:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+// INVERSE HAMBURGER ICON
+.toggle:checked ~ .toggle-label .toggle-text:after {
+  color: $hamburger-bgcolor;
+}
+
+.toggle:checked ~ .toggle-label .toggle-icon:after,
+.toggle:checked ~ .toggle-label .toggle-icon:before {
+  background: $hamburger-bgcolor;
+}
+
+.toggle:checked ~ .toggle-label {
+  position: absolute;
+  right: 0;
+  top: 16px;
+}
+
+// Mobile open
+.toggle:checked ~ .navbar-inner {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.5s;
+  z-index: 50;
+}
+
+.toggle:checked ~ .navbar-inner .navbar {
+  left: $mobile-menu-width;
+}

@@ -1,0 +1,52 @@
+//
+// INFOBOX
+// --------
+
+.infobox {
+  padding: 0px 0;
+  background-image: url("assets/images/mountains.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @media #{$mq-small} {
+    padding: 120px 0;
+  }
+}
+
+.infobox-title p {
+  line-height: 1.2;
+  @media #{$mq-small} {
+    line-height: 48px;
+  }
+}
+
+.infobox-content {
+  margin-top: 24px;
+}
+
+.infobox .btn-group {
+  margin-top: 48px;
+}
+
+.infobox .btn {
+  @media #{$mq-small} {
+    vertical-align: middle;
+    &:first-child {
+      margin-right: 32px;
+    }
+  }
+}
+
+.infobox .btn-link {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 183px;
+
+  @media #{$mq-small} {
+    position: static;
+  }
+}
