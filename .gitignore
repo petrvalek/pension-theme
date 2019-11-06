@@ -2,6 +2,5 @@ node_modules
 package-lock.json
 yarn-error-log
 _DS_Store
-components/mobile-navigate.php
 assets/js/app.js
 components/mobile-navigate.php
