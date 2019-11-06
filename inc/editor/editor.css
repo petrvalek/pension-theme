@@ -1383,7 +1383,8 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
   margin: 0 0.25rem;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 0.8rem;
   z-index: 2;
 }
@@ -1494,7 +1495,8 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
   margin-top: -6px;
   position: absolute;
   top: 50%;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   width: 6px;
 }
 
@@ -1527,7 +1529,8 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 6px;
 }
 
@@ -2523,7 +2526,8 @@ video.video-responsive::before {
   height: 0.625rem;
   border-top: 0.125rem solid #ffffff;
   border-right: 0.125rem solid #ffffff;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .btn-secondary .button-text {
@@ -2547,7 +2551,8 @@ video.video-responsive::before {
 
 .btn-secondary:hover .circle .icon.arrow {
   background: #ffffff;
-  transform: translate(1rem, 0);
+  -webkit-transform: translate(1rem, 0);
+          transform: translate(1rem, 0);
 }
 
 .btn-secondary:hover .button-text {
@@ -2742,15 +2747,18 @@ div.wpcf7 .ajax-loader {
 }
 
 .toggle-label .toggle-icon {
-  transform: translate3d(-50%, -5px, 0);
+  -webkit-transform: translate3d(-50%, -5px, 0);
+          transform: translate3d(-50%, -5px, 0);
 }
 
 .toggle-label .toggle-icon:before {
-  transform: translate3d(-50%, -11.5px, 0);
+  -webkit-transform: translate3d(-50%, -11.5px, 0);
+          transform: translate3d(-50%, -11.5px, 0);
 }
 
 .toggle-label .toggle-icon:after {
-  transform: translate3d(-50%, 5px, 0);
+  -webkit-transform: translate3d(-50%, 5px, 0);
+          transform: translate3d(-50%, 5px, 0);
 }
 
 .toggle:checked ~ .toggle-label .toggle-icon {
@@ -2763,12 +2771,14 @@ div.wpcf7 .ajax-loader {
 }
 
 .toggle:checked ~ .toggle-label .toggle-icon:before {
-  transform: translateX(-50%) rotate(45deg);
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
   top: 1.5px;
 }
 
 .toggle:checked ~ .toggle-label .toggle-icon:after {
-  transform: translateX(-50%) translateY(-10px) rotate(-45deg);
+  -webkit-transform: translateX(-50%) translateY(-10px) rotate(-45deg);
+          transform: translateX(-50%) translateY(-10px) rotate(-45deg);
   top: 8.5px;
 }
 
@@ -3017,11 +3027,14 @@ div.wpcf7 .ajax-loader {
 
 .room-single__thumbnail img {
   width: 100%;
+  transition: -webkit-transform 200ms linear;
   transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
 }
 
 .room-single__thumbnail img:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media only screen and (min-width: 48em) {
@@ -3115,6 +3128,11 @@ div.wpcf7 .ajax-loader {
   .page-id-101 .has-3-columns .wp-block-column:last-child {
     flex-basis: 100%;
   }
+}
+
+.page-id-101 .wp-block-image figure.aligncenter {
+  text-align: center;
+  width: 100% !important;
 }
 
 .page-id-89 .page-content .container {
@@ -3285,7 +3303,8 @@ div.wpcf7 .ajax-loader {
     background: #8d3e3b;
     left: 0;
     transition: all 0.5s;
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
     list-style: none;
   }
 }

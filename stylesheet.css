@@ -1562,7 +1562,8 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
   margin: 0 0.25rem;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 0.8rem;
   z-index: 2;
 }
@@ -1673,7 +1674,8 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
   margin-top: -6px;
   position: absolute;
   top: 50%;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   width: 6px;
 }
 
@@ -1706,7 +1708,8 @@ textarea.form-input, textarea.form-input.input-lg, textarea.form-input.input-sm 
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 6px;
 }
 
@@ -2741,7 +2744,8 @@ video.video-responsive::before {
   height: 0.625rem;
   border-top: 0.125rem solid #ffffff;
   border-right: 0.125rem solid #ffffff;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .btn-secondary .button-text {
@@ -2765,7 +2769,8 @@ video.video-responsive::before {
 
 .btn-secondary:hover .circle .icon.arrow {
   background: #ffffff;
-  transform: translate(1rem, 0);
+  -webkit-transform: translate(1rem, 0);
+          transform: translate(1rem, 0);
 }
 
 .btn-secondary:hover .button-text {
@@ -3297,15 +3302,18 @@ body.lb-disable-scrolling {
 }
 
 .toggle-label .toggle-icon {
-  transform: translate3d(-50%, -5px, 0);
+  -webkit-transform: translate3d(-50%, -5px, 0);
+          transform: translate3d(-50%, -5px, 0);
 }
 
 .toggle-label .toggle-icon:before {
-  transform: translate3d(-50%, -11.5px, 0);
+  -webkit-transform: translate3d(-50%, -11.5px, 0);
+          transform: translate3d(-50%, -11.5px, 0);
 }
 
 .toggle-label .toggle-icon:after {
-  transform: translate3d(-50%, 5px, 0);
+  -webkit-transform: translate3d(-50%, 5px, 0);
+          transform: translate3d(-50%, 5px, 0);
 }
 
 .toggle:checked ~ .toggle-label .toggle-icon {
@@ -3318,12 +3326,14 @@ body.lb-disable-scrolling {
 }
 
 .toggle:checked ~ .toggle-label .toggle-icon:before {
-  transform: translateX(-50%) rotate(45deg);
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
   top: 1.5px;
 }
 
 .toggle:checked ~ .toggle-label .toggle-icon:after {
-  transform: translateX(-50%) translateY(-10px) rotate(-45deg);
+  -webkit-transform: translateX(-50%) translateY(-10px) rotate(-45deg);
+          transform: translateX(-50%) translateY(-10px) rotate(-45deg);
   top: 8.5px;
 }
 
@@ -3572,11 +3582,14 @@ body.lb-disable-scrolling {
 
 .room-single__thumbnail img {
   width: 100%;
+  transition: -webkit-transform 200ms linear;
   transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
 }
 
 .room-single__thumbnail img:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media only screen and (min-width: 48em) {
@@ -3645,7 +3658,8 @@ body.lb-disable-scrolling {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   opacity: 0;
   z-index: 2;
   font-size: 32px;
@@ -4044,7 +4058,8 @@ body.lb-disable-scrolling {
   bottom: 0;
   width: 100%;
   z-index: 9999;
-  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
   transition: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
 }
 
@@ -4055,7 +4070,8 @@ body.lb-disable-scrolling {
 }
 
 .mobile-navigate.open {
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .mobile-navigate:before {
@@ -4206,6 +4222,11 @@ body.lb-disable-scrolling {
   .page-id-101 .has-3-columns .wp-block-column:last-child {
     flex-basis: 100%;
   }
+}
+
+.page-id-101 .wp-block-image figure.aligncenter {
+  text-align: center;
+  width: 100% !important;
 }
 
 .page-id-89 .page-content .container {
@@ -4376,7 +4397,8 @@ body.lb-disable-scrolling {
     background: #8d3e3b;
     left: 0;
     transition: all 0.5s;
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
     list-style: none;
   }
 }
