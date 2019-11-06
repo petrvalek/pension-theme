@@ -4686,6 +4686,10 @@ body.nav-open {
   margin-top: 40px;
 }
 
+.btn-reservation:focus {
+  color: #8d3e3b !important;
+}
+
 .single-pokoje .w-two-one ul {
   margin: 0;
 }
