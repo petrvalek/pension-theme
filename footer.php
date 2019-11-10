@@ -61,9 +61,21 @@
                 <div class="column col-auto col-sm-12">
                     <ul class="footer-pensions-list">
                         <li><a href="http://horskarecepce.cz/" rel="follow" target="_blank" title="Otevřít Horskou recepci">Horská recepce</a></li>
+                    
+                    <?php $currentUrl = $_SERVER['SERVER_NAME']; ?>
+                    
+                    <?php if (!$currentUrl == $currentUrl) : ?>
+                        <li><a href="http://upaniberty.cz" rel="follow" target="_blank" title="Otevřít penzion: U paní Berty ">Penzion U paní Berty</a></li>
+                    <?php endif; ?>
+                    <?php if (!$currentUrl == $currentUrl) : ?>
                         <li><a href="http://penziontemnydul.cz" rel="follow" target="_blank" title="Otevřít penzion: Penzion Temný Důl ">Penzion Temný Důl</a></li>
+                    <?php endif; ?>
+                    <?php if (!$currentUrl == $currentUrl) : ?>
                         <li><a href="http://boudaukostela.cz" rel="follow" target="_blank" title="Otevřít penzion: Bouda U Kostela ">Penzion Bouda U Kostela</a></li>
+                    <?php endif; ?>
+                    <?php if (!$currentUrl == $currentUrl) : ?>
                         <li><a href="http://lysecinskabouda.eu" rel="follow" target="_blank" title="Otevřít penzion: Lysečinská bouda">Penzion Lysečinská bouda</a></li>
+                    <?php endif; ?>
                     </ul>
                 </div>
                 <div class="footer-copy-content column col col-sm-12">
