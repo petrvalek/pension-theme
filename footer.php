@@ -2,6 +2,23 @@
 
     get_template_part( 'components/newsletter-form' );
 
+$logo_link   = '';
+$currentUrl = $_SERVER['SERVER_NAME']; 
+
+switch ($currentUrl) {
+    case 'boudaukostela.cz':
+        $logo_link = 'u_kostela-logo.png';
+        break;
+    case 'upaniberty.cz':
+        $logo_link = 'u_pani_berty-logo.png';
+        break;
+    case 'lysecinskabouda.eu':
+        $logo_link = 'lysecinska-logo.png';
+        break;
+    case 'penziontemnydul.cz':
+        $logo_link = 'union-logo.png';
+        break;
+}?>
 ?>
 
 <footer class="footer" role="contentinfo">
@@ -12,7 +29,7 @@
                 <a href="<?php echo get_bloginfo( 'wpurl' ); ?>" title="<?php echo get_bloginfo( 'name' ); ?>">
                     <?php               
                         if ( has_custom_logo() ) {
-                            echo '<img class="footer-logo no-lazyloaded" src="' . get_stylesheet_directory_uri() . '/assets/images/u_pani_berty_logo-black.png" alt="' . get_bloginfo( 'name' ) . '">';
+                            echo '<img class="footer-logo no-lazyloaded" src="' . get_stylesheet_directory_uri() . '/assets/images/' . $logo_link . '" alt="' . get_bloginfo( 'name' ) . '">';
                         } else {
                             echo '<h2 class="footer__site-title">'. get_bloginfo( 'name' ) .'</h2>';
                         }
