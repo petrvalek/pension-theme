@@ -64,7 +64,7 @@
                     
                     <?php $currentUrl = $_SERVER['SERVER_NAME']; ?>
                     
-                    <?php if (!$currentUrl == $currentUrl) : ?>
+                    <?php if ($currentUrl == !$currentUrl) : ?>
                         <li><a href="http://upaniberty.cz" rel="follow" target="_blank" title="Otevřít penzion: U paní Berty ">Penzion U paní Berty</a></li>
                     <?php endif; ?>
                     <?php if (!$currentUrl == $currentUrl) : ?>
