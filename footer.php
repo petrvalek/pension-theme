@@ -19,7 +19,6 @@ switch ($currentUrl) {
         $logo_link = 'union-logo.png';
         break;
 }?>
-?>
 
 <footer class="footer" role="contentinfo">
     <div class="footer-inner container grid-xl">
