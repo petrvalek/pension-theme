@@ -36,12 +36,12 @@ jQuery(document).ready(function($) {
       var iOS =
         !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
-      if (iOS == true) {
-        $(".js-map").attr(
-          "href",
-          "http://maps.apple.com/?q=Penzion+U+pani+Berty&ssl=50.6820477,15.8008879"
-        );
-      }
+      // if (iOS == true) {
+      //   $(".js-map").attr(
+      //     "href",
+      //     "http://maps.apple.com/?q=Penzion+Lysečinská+Bouda&ssl=50.712699,15.8322235"
+      //   );
+      // }
     },
     showNavigateMobile: function() {
       var $handler = $(".js-mobile-navigate");
