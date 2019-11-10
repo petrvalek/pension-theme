@@ -22,7 +22,9 @@
 					<?php get_template_part( 'components/Room/room-single' ); ?>
 				</div>
 				<!-- /article -->
-			<?php endif; ?>
+	
+	
+		<?php else : ?>
 			
 		<!-- article -->
 		<div class="column col-4 col-md-6 col-sm-12">
@@ -30,6 +32,7 @@
 		</div>
 		<!-- /article -->
 
+				<?php endif; ?>
 
 		<?php endwhile; endif; ?>
 	</div>
