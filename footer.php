@@ -64,16 +64,16 @@
                     
                     <?php $currentUrl = $_SERVER['SERVER_NAME']; ?>
                     
-                    <?php if ($currentUrl == !$currentUrl) : ?>
-                        <li><a href="http://upaniberty.cz" rel="follow" target="_blank" title="Otevřít penzion: U paní Berty ">Penzion U paní Berty</a></li>
+                    <?php if ($currentUrl != 'upaniberty.cz') : ?>
+                        <li><a href="http://upaniberty.cz" rel="follow" target="_blank" title="Otevřít penzion: U paní Berty">Penzion U paní Berty</a></li>
                     <?php endif; ?>
-                    <?php if (!$currentUrl == $currentUrl) : ?>
-                        <li><a href="http://penziontemnydul.cz" rel="follow" target="_blank" title="Otevřít penzion: Penzion Temný Důl ">Penzion Temný Důl</a></li>
+                    <?php if ($currentUrl != 'penziontemnydul.cz') : ?>
+                        <li><a href="http://penziontemnydul.cz" rel="follow" target="_blank" title="Otevřít penzion: Penzion Temný Důl">Penzion Temný Důl</a></li>
                     <?php endif; ?>
-                    <?php if (!$currentUrl == $currentUrl) : ?>
+                    <?php if ($currentUrl != 'boudaukostela.cz') : ?>
                         <li><a href="http://boudaukostela.cz" rel="follow" target="_blank" title="Otevřít penzion: Bouda U Kostela ">Penzion Bouda U Kostela</a></li>
                     <?php endif; ?>
-                    <?php if (!$currentUrl == $currentUrl) : ?>
+                    <?php if ($currentUrl != 'lysecinskabouda.eu') : ?>
                         <li><a href="http://lysecinskabouda.eu" rel="follow" target="_blank" title="Otevřít penzion: Lysečinská bouda">Penzion Lysečinská bouda</a></li>
                     <?php endif; ?>
                     </ul>
