@@ -4229,20 +4229,6 @@ body.lb-disable-scrolling {
   width: 100% !important;
 }
 
-.page-id-89 .page-content .container {
-  margin: 0;
-  padding: 0;
-}
-
-@media only screen and (min-width: 48em) {
-  .page-id-89 .page-content .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
 .header {
   position: relative;
   z-index: 5;

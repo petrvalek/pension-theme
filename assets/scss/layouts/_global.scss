@@ -49,22 +49,22 @@
     }
   }
 
-  .wp-block-image figure.aligncenter{
+  .wp-block-image figure.aligncenter {
     text-align: center;
     width: 100% !important;
   }
 }
 
-.page-id-89 .page-content {
-  .container {
-    margin: 0;
-    padding: 0;
+// .page-id-89 .page-content {
+//   .container {
+//     margin: 0;
+//     padding: 0;
 
-    @media #{$mq-small} {
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
-}
+//     @media #{$mq-small} {
+//       margin-left: auto;
+//       margin-right: auto;
+//       padding-left: 1rem;
+//       padding-right: 1rem;
+//     }
+//   }
+// }
