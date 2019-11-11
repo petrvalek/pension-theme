@@ -16,7 +16,7 @@
 			<?php 
 			$currentUrl = $_SERVER['SERVER_NAME']; 
 			
-			if ($currentUrl != 'boudaukostela.cz') : ?>
+			if ($currentUrl == 'boudaukostela.cz') : ?>
 				<!-- article -->
 				<div class="column col-6 col-md-6 col-sm-12">
 					<?php get_template_part( 'components/Room/room-single' ); ?>
