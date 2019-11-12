@@ -27,5 +27,8 @@ include_once( __DIR__ . '/inc/attachment.php');
 /* EDITOR */
 include_once( __DIR__ . '/inc/editor/editor.php');
 
+/* BLOCKS */
+include_once( __DIR__ . '/components/blocks/services.php');
+
 
 
