@@ -110,3 +110,8 @@ div.wpcf7-display-none,
 div.wpcf7 .ajax-loader {
   display: none;
 }
+
+// Google recaptcha hide
+.grecaptcha-badge {
+  visibility: collapse !important;
+}

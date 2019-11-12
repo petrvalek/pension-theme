@@ -2986,6 +2986,10 @@ div.wpcf7 .ajax-loader {
   display: none;
 }
 
+.grecaptcha-badge {
+  visibility: collapse !important;
+}
+
 .wp-block-separator {
   display: block;
   height: 1px;
