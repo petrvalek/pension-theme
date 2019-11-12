@@ -4545,6 +4545,12 @@ body.nav-open {
   color: #8d3e3b;
 }
 
+.footer .widget .fb-page,
+.footer .widget .fb-page span,
+.footer .widget .fb-page span iframe[style] {
+  max-width: 100% !important;
+}
+
 .footer .widget-title {
   font-size: 16px;
   font-weight: bold;

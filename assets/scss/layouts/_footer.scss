@@ -64,6 +64,11 @@
       color: $primary-color;
     }
   }
+  .fb-page,
+  .fb-page span,
+  .fb-page span iframe[style] {
+    max-width: 100% !important;
+  }
 }
 
 .footer .widget-title {
