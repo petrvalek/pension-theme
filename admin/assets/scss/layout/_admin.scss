@@ -3,7 +3,11 @@
 // -------
 
 .wp-admin {
-    background: $admin-bg;
-    color: $font-color;
-    // font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  background: $admin-bg;
+  color: $font-color;
+  // font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+}
+
+#footer-upgrade {
+  float: left;
 }

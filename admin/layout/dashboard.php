@@ -33,16 +33,11 @@ function add_dashboard_widgets() {
 		'My Custom Dashboard Widget', // Title.
 		'dashboard_widget_welcome_function' // Display function.
 	);
-	// wp_add_dashboard_widget(
-	// 	'dashboard_widget_support', // Widget slug.
-	// 	'Potřebujete s něčím pomoc?', // Title.
-	// 	'dashboard_widget_support_function' // Display function.
-	// );
-	// wp_add_dashboard_widget(
-	// 	'dashboard_events', // Widget slug.
-	// 	'Nadcházející akce', // Title.
-	// 	'dashboard_widget_event_function' // Display function.
-	// );
+	wp_add_dashboard_widget(
+		'dashboard_widget_support', // Widget slug.
+		'Potřebujete s něčím pomoc?', // Title.
+		'dashboard_widget_support_function' // Display function.
+	);
 }
 add_action( 'wp_dashboard_setup', 'add_dashboard_widgets' );
 
@@ -63,7 +58,21 @@ function dashboard_widget_welcome_function() {
 
 function dashboard_widget_support_function() {
 
-	echo "<h2>Dobrý den, " . $admin_firstname . '</h2>';
+	echo <<<EOL
+	<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5dcd1a47d96992700fc76351/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+EOL;
 }
 
 
