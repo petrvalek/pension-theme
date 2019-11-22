@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
     init: function() {
       this.mobileMenu();
       this.backToTop();
-      this.ifAppleDeviceMap();
+      this.addSubscriber();
       if ($(".home, .page-id-101").length) {
         this.showNavigateMobile();
       }
@@ -32,23 +32,46 @@ jQuery(document).ready(function($) {
         return false;
       });
     },
-    ifAppleDeviceMap: function() {
-      var iOS =
-        !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-
-      // if (iOS == true) {
-      //   $(".js-map").attr(
-      //     "href",
-      //     "http://maps.apple.com/?q=Penzion+Lysečinská+Bouda&ssl=50.712699,15.8322235"
-      //   );
-      // }
-    },
     showNavigateMobile: function() {
       var $handler = $(".js-mobile-navigate");
       $handler.addClass("open");
       setTimeout(function() {
         $handler.removeClass("open");
       }, 4000);
+    },
+    addSubscriber: function() {
+      $(".js-newsletter-form").submit(function(event) {
+        var ajaxRequest;
+
+        /* Stop form from submitting normally */
+        event.preventDefault();
+
+        /* Clear result div*/
+        $("#result").html("");
+
+        /* Get from elements values */
+        var values = $(this).serialize();
+        var action = $(this).attr("action");
+
+        ajaxRequest = $.ajax({
+          url: action,
+          type: "post",
+          data: values
+        });
+
+        /*  Request can be aborted by ajaxRequest.abort() */
+
+        ajaxRequest.done(function(response, textStatus, jqXHR) {
+          // Show successfully for submit message
+          $(".form-notify .success").removeClass("is-hidden");
+        });
+
+        /* On failure of request this function will be called  */
+        ajaxRequest.fail(function() {
+          // Show error
+          $(".form-notify .error").removeClass("is-hidden");
+        });
+      });
     }
   };
   App.init();

@@ -115,3 +115,16 @@ div.wpcf7 .ajax-loader {
 .grecaptcha-badge {
   visibility: collapse !important;
 }
+
+.form-notify {
+  margin-top: 24px;
+  .toast {
+    @media #{$mq-small} {
+      width: 85%;
+      margin: 0 36px 0 auto;
+    }
+  }
+  .toast.is-hidden {
+    display: none;
+  }
+}
