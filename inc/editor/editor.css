@@ -2654,6 +2654,21 @@ div.wpcf7 .ajax-loader {
   visibility: collapse !important;
 }
 
+.form-notify {
+  margin-top: 24px;
+}
+
+@media only screen and (min-width: 48em) {
+  .form-notify .toast {
+    width: 85%;
+    margin: 0 36px 0 auto;
+  }
+}
+
+.form-notify .toast.is-hidden {
+  display: none;
+}
+
 .wp-block-separator {
   display: block;
   height: 1px;

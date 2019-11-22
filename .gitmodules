@@ -1,0 +1,3 @@
+[submodule "WP-CMS"]
+	path = WP-CMS
+	url = https://github.com/petrvalek/WP-CMS.git

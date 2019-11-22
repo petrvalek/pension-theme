@@ -44,7 +44,7 @@ function reload() {
 
 function watch() {
   browserSync.init({
-    proxy: "localhost/UpaniBerty.cz",
+    proxy: "upaniberty.test",
     port: 8080,
     open: false,
     notify: false
